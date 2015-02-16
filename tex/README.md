@@ -35,7 +35,7 @@ Für die Verwaltung der Literaturliste wird das BibTeX-Format verwendet (Datei `
 Achten Sie darauf, die Dokumente im UTF-8-Format abzulegen. Nur so ist eine plattformunabhängige Verwendung gewährleistet. Die Vorlagen hier sind ebenfalls im UTF-8-Format.
 
 
-## Aufbau der Vorlage
+## Aufbau der Vorlage im Verzeichnis `tex`
 
 Die Vorlage besteht aus einer einzigen Datei, die Sie teilweise nach Ihren Bedürfnissen anpassen müssen bzw. mit Ihren Inhalten füllen.
 
@@ -52,6 +52,11 @@ Neben den Dateien gibt es noch zwei Ordner
 
   * `/img` - Ablageort für die verwendeten Bilder
   * `/src` - Ablageort für die verwendeten Quelltexte
+
+
+## Ergebnisse im Ordner `result`
+
+Die Ergebnisse finden sich im Ordner `result`. Zum einfacheren Verständnis ist hier ein fertiges Dokument, das aus den Quellen erzeugt wurde, eingecheckt.
 
 
 ## Latex-Projekt unter TexnicCenter einrichten
