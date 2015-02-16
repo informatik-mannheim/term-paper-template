@@ -1,0 +1,7 @@
+temp/*
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+
