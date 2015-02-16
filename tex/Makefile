@@ -28,7 +28,7 @@ clean:
 	rm -rf $(TEMP_DIR)
 	rm -rf $(RESULT_DIR)
 
-$(TEMP_DIR)/seminararbeit.pdf: seminararbeit.tex literatur.bib
+$(TEMP_DIR)/seminararbeit.pdf: seminararbeit.tex preambel.tex literatur.bib src/* img/*
 	$(latex-it)
 
 $(RESULT_DIR)/seminararbeit.pdf: $(TEMP_DIR)/seminararbeit.pdf

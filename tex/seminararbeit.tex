@@ -1,72 +1,22 @@
 %% Preambel
 \documentclass[conference,final,a4paper]{IEEEtran}
-\usepackage{cite}
-\usepackage[pdftex]{graphicx}
-\graphicspath{{img/}}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\usepackage[cmex10]{amsmath}
-\usepackage{algorithmic}
-\usepackage{array}
-\usepackage{fixltx2e}
-\usepackage{dblfloatfix}
-\usepackage{url}
-\usepackage{booktabs}
-\usepackage{color}
-\usepackage[printonlyused]{acronym}
-\definecolor{darkblue}{rgb}{0,0,.5}
-
 \usepackage[utf8]{inputenx}
-\usepackage[ngerman]{betababel}
-\usepackage[
-	    unicode=true,
-      hypertexnames=false,
-      colorlinks=true,
-%      colorlinks=false,
-      linkcolor=darkblue,
-      citecolor=darkblue,
-      urlcolor=darkblue,
-      pdftex
-   ]{hyperref}
-%	 \PrerenderUnicode{ü}
 
+%% Bitte legen Sie hier den Titel und den Autor der Arbeit fest
 \newcommand{\autoren}[0]{NACHNAME, VORNAME}
-\newcommand{\dokumententitel}[0]{Vorlage für einen Seminarbeitrag}
+\newcommand{\dokumententitel}[0]{Vorlage für eine Seminararbeit}
 
-\hypersetup{
-  pdftitle={\dokumententitel},
-	pdfauthor={\autoren},
-	pdfdisplaydoctitle=true
-}
+\input{preambel} % Weitere Einstellungen aus einer anderen Datei lesen
 
-\begin{document}
-
-% Titel des Dokuments
-\title{\dokumententitel}
-
-% Namen der Autoren
-\author{
-  \IEEEauthorblockN{\autoren}
-  \IEEEauthorblockA{
-    Hochschule Mannheim\\
-    Paul-Wittsack-Str. 10, 
-    68163 Mannheim
-    }
-}
-
-% Titel erzeugen
-\maketitle
-\thispagestyle{plain}
-\pagestyle{plain}
+% Eigentliches Dokument beginnt hier
+% ----------------------------------------------------------------------------------------------------------
 
 % Kurze Zusammenfassung des Dokuments
 \begin{abstract}
 An dieser Stelle steht eine kurze Zusammenfassung des Inhaltes des Dokuments. 
 \end{abstract}
 
-
-% Eigentliches Dokument beginnt hier
-% ----------------------------------------------------------------------------------------------------------
-
+% Abschnitte mit \section und Unterabschnitte mit \subsection
 \section{Einleitung}
 
 Eine generelle Darstellung des Problems, der Ziele der Arbeit und deren Aufbau. Beschreibt den Hintergrund der Arbeit, das bearbeitete Problem und die Untersuchungsmethoden. Am Ende wird kurz der Aufbau der Arbeit erläutert.
@@ -151,7 +101,65 @@ Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (e,\.B. Scr
 
 Jede Abbildung (vgl. Abbildung~\ref{fig_sim} auf Seite~\pageref{fig_sim}) und Tabelle (z.\,B. Tabelle~\ref{google:numbers} auf Seite~\pageref{google:numbers}) sollte im Fließtext referenziert und behandelt werden. Die Beschriftung unter den Abbildungen sollte die Abbildung vollständig und verständlich beschreiben, auch ohne dass man den restlichen Text gelesen hat. Gleiches gilt für die Beschriftungen von Tabellen, die über die Tabellen gesetzt werden.
 
+\section{Formelsatz}
 
+Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz (siehe Formel~\ref{Formel}):
+
+\begin{equation}
+\begin{bmatrix}         
+   1 &  4 &  2 \\
+   4 &  0 & -3 
+\end{bmatrix}        
+        \cdot
+\begin{bmatrix}                
+   1 &  1 &  0 \\
+  -2 &  3 &  5 \\
+   0 &  1 &  4 
+\end{bmatrix}        
+       {=} 
+\begin{bmatrix}               
+  -7 &  15 &  28 \\
+   4 &   1 & -12 
+\end{bmatrix}
+\label{Formel}
+\end{equation}
+\\
+
+\section{Sourcecode}
+
+Man kann mit Latex auch einfach Sourcecode in den Text aufnehmen.
+
+\subsection{Aus einer Datei}
+
+\lstinputlisting[firstline=2,language=Java,caption={Das Interface Crypter}]{\srcloc/Crypter.java}
+
+
+\subsection{Inline}
+
+\begin{lstlisting}[language=Java,caption=Methode checkKey()]
+/**
+ * Testet den Schlüssel auf Korrektheit: Er muss 
+ * mindestens die Länge 1 haben und darf nur 
+ * Zeichen von A-Z enthalten.
+ *
+ * @param key zu testender Schlüssel
+ * @throws CrypterException wenn der Schlüssel nicht 
+ * OK ist.
+ */
+protected void checkKey(Key key) throws CrypterException {
+
+    // Passt die Länge?
+    if (key.getKey().length == 0) {
+        throw new CrypterException("Der Schlüssel muss mindestens " +
+                "ein Zeichen lang sein");
+    }
+
+    checkCharacters(key.getKey(), ALPHABET);
+}
+\end{lstlisting}
+
+
+%% --------------------------------------------------------------------
 
 \section*{Abkürzungsverzeichnis}
 \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
@@ -163,9 +171,10 @@ Jede Abbildung (vgl. Abbildung~\ref{fig_sim} auf Seite~\pageref{fig_sim}) und Ta
 \acro{AES}{Advanced Encryption Standard}
 \end{acronym}
 
+% Literaturverzeichnis
+
 \bibliographystyle{plaindin}
 \bibliography{literatur}
-
 
 \end{document}
 

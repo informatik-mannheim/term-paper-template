@@ -1,0 +1,99 @@
+% Hie muss normalerweise nichts angepasst werden
+\usepackage{cite}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{img/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\usepackage[cmex10]{amsmath}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{fixltx2e}
+\usepackage{dblfloatfix}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}             % Source Code listings
+\usepackage[printonlyused]{acronym}
+
+% Farben definieren
+\definecolor{linkblue}{RGB}{0, 0, 100}
+\definecolor{linkblack}{RGB}{0, 0, 0}
+\definecolor{darkgreen}{RGB}{14, 144, 102}
+\definecolor{darkblue}{RGB}{0,0,168}
+\definecolor{darkred}{RGB}{128,0,0}
+\definecolor{comment}{RGB}{63, 127, 95}
+\definecolor{javadoccomment}{RGB}{63, 95, 191}
+\definecolor{keyword}{RGB}{108, 0, 67}
+\definecolor{type}{RGB}{0, 0, 0}
+\definecolor{method}{RGB}{0, 0, 0}
+\definecolor{variable}{RGB}{0, 0, 0}
+\definecolor{literal}{RGB}{31,0, 255}
+\definecolor{operator}{RGB}{0, 0, 0}
+
+\usepackage[ngerman]{betababel}
+\usepackage[
+	    unicode=true,
+      hypertexnames=false,
+      colorlinks=true,
+%      colorlinks=false,
+      linkcolor=darkblue,
+      citecolor=darkblue,
+      urlcolor=darkblue,
+      pdftex
+   ]{hyperref}
+%	 \PrerenderUnicode{ü}
+
+% Einstellungen für Quelltexte
+\lstset{     
+      xleftmargin=0.1cm,     
+      basicstyle=\scriptsize\ttfamily,
+      keywordstyle=\color{keyword},
+      identifierstyle=\color{variable},
+      commentstyle=\color{comment}, 
+      stringstyle=\color{literal}, 
+      tabsize=2,
+      lineskip={2pt},
+      columns=flexible,
+      inputencoding=utf8,
+      captionpos=b,
+      breakautoindent=true,
+	  breakindent=2em,
+	  breaklines=true,
+	  prebreak=,
+	  postbreak=,
+      numbers=none,
+      numberstyle=\tiny,
+      showspaces=false,      % Keine Leerzeichensymbole
+      showtabs=false,        % Keine Tabsymbole
+      showstringspaces=false,% Leerzeichen in Strings
+      morecomment=[s][\color{javadoccomment}]{/**}{*/},
+      literate={Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}2 {ü}{{\"u}}1 {ä}{{\"a}}1 {ö}{{\"o}}1
+}
+
+\hypersetup{
+  pdftitle={\dokumententitel},
+	pdfauthor={\autoren},
+	pdfdisplaydoctitle=true
+}
+
+% Wo liegt Sourcecode?
+\newcommand{\srcloc}{src/}
+
+\begin{document}
+
+% Titel des Dokuments
+\title{\dokumententitel}
+
+% Namen der Autoren
+\author{
+  \IEEEauthorblockN{\autoren}
+  \IEEEauthorblockA{
+    Hochschule Mannheim\\
+    Paul-Wittsack-Str. 10, 
+    68163 Mannheim
+    }
+}
+
+% Titel erzeugen
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
