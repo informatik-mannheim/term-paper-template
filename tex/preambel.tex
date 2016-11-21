@@ -1,5 +1,4 @@
 % Hie muss normalerweise nichts angepasst werden
-\usepackage{cite}
 \usepackage[pdftex]{graphicx}
 \graphicspath{{img/}}
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
@@ -8,6 +7,8 @@
 \usepackage{array}
 \usepackage{dblfloatfix}
 \usepackage{url}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage[backend=biber]{biblatex}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{listings}             % Source Code listings
@@ -76,6 +77,9 @@
 
 % Wo liegt Sourcecode?
 \newcommand{\srcloc}{src/}
+
+% Literatur einbinden
+\addbibresource{literatur.bib}
 
 \begin{document}
 

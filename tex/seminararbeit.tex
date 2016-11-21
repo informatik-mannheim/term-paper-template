@@ -26,7 +26,7 @@ Eine generelle Darstellung des Problems, der Ziele der Arbeit und deren Aufbau. 
 
 \subsection{Stil der Arbeit}
 
-Schreiben Sie die Arbeit so, dass ein fachkundiger Dritter in der Lage ist, den Text zu verstehen und die darin enthaltenen Schlüsse nachvollziehen zu können. Hierzu sollten alle nicht bekannten Fakten mit Literaturstellen belegt werden. Schreiben Sie in einer einfachen, gut verständlichen Sprache mit kurzen Sätzen. Schreiben sie durchgängig in der Gegenwartsform und im passiv (z.\,B. "` \dots wird untersucht"', "` \dots zeigt folgende Ergebnisse"'). Nutzen Sie wenn möglich deutsche Begriffe, auf keinen Fall jedoch Mischformen wie \emph{downgeloaded} oder \emph{upgedatet}. Abkürzungen müssen in einem Abkürzungsverzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}.
+Schreiben Sie die Arbeit so, dass ein fachkundiger Dritter in der Lage ist, den Text zu verstehen und die darin enthaltenen Schlüsse nachvollziehen zu können. Hierzu sollten alle nicht bekannten Fakten mit Literaturstellen belegt werden. Schreiben Sie in einer einfachen, gut verständlichen Sprache mit kurzen Sätzen. Schreiben sie durchgängig in der Gegenwartsform und im passiv (z.\,B. \enquote{\dots wird untersucht}, \enquote{\dots zeigt folgende Ergebnisse}). Nutzen Sie wenn möglich deutsche Begriffe, auf keinen Fall jedoch Mischformen wie \emph{downgeloaded} oder \emph{upgedatet}. Abkürzungen müssen in einem Abkürzungsverzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}.
 
 
 \subsection{Anmerkungen}
@@ -35,19 +35,19 @@ Zur Qualitätssicherung Ihrer Arbeit ist u.\,a. folgende Vorgehensweise hilfreic
 \begin{itemize}
 \item Wenn es irgendwie möglich ist, sollten Sie die Arbeit auch Kommilitonen lesen lassen. Selbst Verwandte, Freunde und Bekannte, die nicht \emph{vom Fach} sind, finden vielleicht Fehler oder kommentieren Ihre Arbeit.
 \item Um sicher zu stellen, dass Sie die hier beschriebenen Aspekte beachten, sollten Sie die Formalien z.\,B. nach jedem geschriebenen Kapitel überprüfen.
-\item Lassen Sie sich von Ihrem betreuenden Professor alle Randbedingungen und Bewertungsschemata geben und fragen Sie, worauf sie achten sollen. 
+\item Lassen Sie sich von Ihrem betreuenden Professor alle Randbedingungen und Bewertungsschemata geben und fragen Sie, worauf sie achten sollen.
 \end{itemize}
 
 
 \section{Beispiel für eine Tabelle}
 
-Tabellen können einfach eingebunden werden. Die Tabelle\ref{google:numbers} zeigt, eine solche, eingebundene Tabelle.
+Tabellen können einfach eingebunden werden. Die Tabelle~\ref{google:numbers} zeigt, eine solche, eingebundene Tabelle.
 
 % Tabelle
 \begin{table}[!ht]
 \centering
 \rmfamily
-\caption{Zeitbedarf für ausgewählte Aktionen, nach  \cite{Dean2012}}
+\caption{Zeitbedarf für ausgewählte Aktionen, nach~\cite{Dean2012}}
 \renewcommand{\arraystretch}{1.1}
 \sffamily
 \begin{footnotesize}
@@ -172,10 +172,6 @@ protected void checkKey(Key key) throws CrypterException {
 \end{acronym}
 
 % Literaturverzeichnis
-
-\bibliographystyle{plaindin}
-\bibliography{literatur}
+\printbibliography
 
 \end{document}
-
-
