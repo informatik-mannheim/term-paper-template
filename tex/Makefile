@@ -11,12 +11,12 @@ $(eval FILE = $(firstword $^))
 cp literatur.bib $(TEMP_DIR)
 @echo "Building $(FILE)"
 @echo $(FILE)
-@$(LATEX) -backend=biber -draftmode -output-directory=$(TEMP_DIR) $(FILE)
+@$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE)
 @cd $(TEMP_DIR) ; $(BIBTEX) $(basename $(FILE)) 
 # @cd $(TEMP_DIR) ; $(MAKEINDEX) $(basename $(FILE)).idx
-@$(LATEX) -backend=biber -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
-@$(LATEX) -backend=biber -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
-@$(LATEX) -backend=biber -output-directory=$(TEMP_DIR) $(FILE)
+@$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
+@$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
+@$(LATEX) -output-directory=$(TEMP_DIR) $(FILE)
 endef
 
 
