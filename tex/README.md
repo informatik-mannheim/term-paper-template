@@ -12,7 +12,7 @@ Zum Erzeugen der fertigen Arbeit dient das `Makefile` im Verzeichnis `/tex`. Sie
 Sie können die Datei auch von Hand compilieren. Gehen Sie hierzu in das Verzeichnis `/tex` und geben Sie folgende Kommandos nacheinander ein:
 
     pdflatex seminararbeit.tex
-    bibtex seminararbeit.aux
+    biber seminararbeit
     pdflatex seminararbeit.tex
     pdflatex seminararbeit.tex
     pdflatex seminararbeit.tex
