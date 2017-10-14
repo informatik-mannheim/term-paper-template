@@ -1,5 +1,5 @@
 %% Preambel
-\documentclass[conference,final,a4paper]{IEEEtran}
+\documentclass[conference,compsoc,final,a4paper]{IEEEtran}
 \usepackage[utf8]{inputenx}
 
 %% Bitte legen Sie hier den Titel und den Autor der Arbeit fest
@@ -13,8 +13,10 @@
 
 % Kurze Zusammenfassung des Dokuments
 \begin{abstract}
-An dieser Stelle steht eine kurze Zusammenfassung des Inhaltes des Dokuments. 
+An dieser Stelle steht eine kurze Zusammenfassung des Inhaltes des Dokuments.
 \end{abstract}
+
+\tableofcontents
 
 % Abschnitte mit \section und Unterabschnitte mit \subsection
 \section{Einleitung}
@@ -88,7 +90,7 @@ Im Allgemeinen sind Internetquellen nicht zitierfähig, da sie oft weder dem wis
 \section{Abbildungen}
 
 Abbildungen sind oft sehr hilfreich, um Zusammenhänge zu verdeutlichen. Soweit möglich, sollten die Abbildungen als Vektorgrafiken eingebunden werden. Die in der Abbildung enthaltenen Schriftarten sollten nach Möglichkeit die gleichen sein, wie im restlichen Dokument. Alle Beschriftungen innerhalb der Grafik sollten gut lesbar sein.
-Graphen können farbig sein, wenn es der Lesbarkeit dient. Es sollte jedoch darauf geachtet werden, dass auch eine schwarz\-weiß-Kopie noch alle nötigen Informationen enthält (d.h. Liniendiagramme mit verschiedenen Linienarten z.\,B. Strichpunkt).  
+Graphen können farbig sein, wenn es der Lesbarkeit dient. Es sollte jedoch darauf geachtet werden, dass auch eine schwarz\-weiß-Kopie noch alle nötigen Informationen enthält (d.h. Liniendiagramme mit verschiedenen Linienarten z.\,B. Strichpunkt).
 Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (e,\.B. Screenshot), sollte die Auflösung mindestens 600 dpi betragen und die Qualität nicht durch Komprimierung (z.\,B. jpg) verschlechtert werden. Unkomprimierte oder verlustfrei komprimierte Bildformate wie \emph{png} oder \emph{bmp} sind zu bevorzugen. Nur für echte Fotos ist \emph{jpg} geeignet.
 
 % Grafik in einer Spalte
@@ -106,20 +108,20 @@ Jede Abbildung (vgl. Abbildung~\ref{fig_sim} auf Seite~\pageref{fig_sim}) und Ta
 Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz (siehe Formel~\ref{Formel}):
 
 \begin{equation}
-\begin{bmatrix}         
+\begin{bmatrix}
    1 &  4 &  2 \\
-   4 &  0 & -3 
-\end{bmatrix}        
+   4 &  0 & -3
+\end{bmatrix}
         \cdot
-\begin{bmatrix}                
+\begin{bmatrix}
    1 &  1 &  0 \\
   -2 &  3 &  5 \\
-   0 &  1 &  4 
-\end{bmatrix}        
-       {=} 
-\begin{bmatrix}               
+   0 &  1 &  4
+\end{bmatrix}
+       {=}
+\begin{bmatrix}
   -7 &  15 &  28 \\
-   4 &   1 & -12 
+   4 &   1 & -12
 \end{bmatrix}
 \label{Formel}
 \end{equation}
@@ -138,12 +140,12 @@ Man kann mit Latex auch einfach Sourcecode in den Text aufnehmen.
 
 \begin{lstlisting}[language=Java,caption=Methode checkKey()]
 /**
- * Testet den Schlüssel auf Korrektheit: Er muss 
- * mindestens die Länge 1 haben und darf nur 
+ * Testet den Schlüssel auf Korrektheit: Er muss
+ * mindestens die Länge 1 haben und darf nur
  * Zeichen von A-Z enthalten.
  *
  * @param key zu testender Schlüssel
- * @throws CrypterException wenn der Schlüssel nicht 
+ * @throws CrypterException wenn der Schlüssel nicht
  * OK ist.
  */
 protected void checkKey(Key key) throws CrypterException {
@@ -161,9 +163,8 @@ protected void checkKey(Key key) throws CrypterException {
 
 %% --------------------------------------------------------------------
 
-\section*{Abkürzungsverzeichnis}
-\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
-\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis}
+\section*{Abkürzungen}
+\addcontentsline{toc}{section}{Abkürzungen}
 
 \begin{acronym}
 \acro{A2A}{Application-to-Application}
@@ -172,6 +173,7 @@ protected void checkKey(Key key) throws CrypterException {
 \end{acronym}
 
 % Literaturverzeichnis
+\addcontentsline{toc}{section}{Literatur}
 \printbibliography
 
 \end{document}
