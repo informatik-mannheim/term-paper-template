@@ -166,7 +166,10 @@ protected void checkKey(Key key) throws CrypterException {
 \section*{Abkürzungen}
 \addcontentsline{toc}{section}{Abkürzungen}
 
-\begin{acronym}
+% Die längste Abkürzung wird in die eckigen Klammern
+% bei \begin{acronym} geschrieben, um einen häßlichen
+% Umbruch zu verhindern
+\begin{acronym}[AES]
 \acro{A2A}{Application-to-Application}
 \acro{ACL}{Acess Control List}
 \acro{AES}{Advanced Encryption Standard}
