@@ -4,4 +4,6 @@ temp/*
 *.blg
 *.log
 *.out
+*.bak
+*.sav
 
