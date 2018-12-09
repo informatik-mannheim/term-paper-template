@@ -13,6 +13,7 @@
 \usepackage{xcolor}
 \usepackage{listings}             % Source Code listings
 \usepackage[printonlyused]{acronym}
+\usepackage{fancyvrb}
 
 % Farben definieren
 \definecolor{linkblue}{RGB}{0, 0, 100}
@@ -72,8 +73,14 @@
 \hypersetup{
     pdftitle={\dokumententitel},
     pdfauthor={\autoren},
-    pdfdisplaydoctitle=true
+    pdfdisplaydoctitle=true,
+    hidelinks
 }
+
+% Makros für typographisch korrekte Abkürzungen
+\newcommand{\zb}[0]{z.\,B.\ }
+\newcommand{\dahe}[0]{d.\,h.\ }
+\newcommand{\ua}[0]{u.\,a.\ }
 
 % Wo liegt Sourcecode?
 \newcommand{\srcloc}{src/}
