@@ -12,3 +12,6 @@ It is of limited use for people outside the respective university.
 Dieses Repository enthält eine LaTeX-Vorlage für Seminararbeiten. Sie richten sich an Studierende der Fakultät für Informatik an der Hochschule Mannheim.
 
 Für Personen außerhalb der Hochschule ist die Vorlage möglicherweise nur von begrenztem Wert.
+
+Eine detaillierte Dokumentation findet sich im Ordner [tex](tex/).
+
