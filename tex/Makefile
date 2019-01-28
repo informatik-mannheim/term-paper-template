@@ -19,14 +19,18 @@ cp literatur.bib $(TEMP_DIR)
 @$(LATEX) -output-directory=$(TEMP_DIR) $(FILE)
 endef
 
-
+.PHONY: all
 all: $(TEMP_DIR) $(RESULT_DIR) \
 	$(TEMP_DIR)/seminararbeit.pdf \
 	$(RESULT_DIR)/seminararbeit.pdf \
 
+.PHONY: clean
 clean:
 	rm -rf $(TEMP_DIR)
 	rm -rf $(RESULT_DIR)
+
+overleaf:
+	@cd .. && zip -r term-paper-overleaf.zip tex/*
 
 $(TEMP_DIR)/seminararbeit.pdf: seminararbeit.tex preambel.tex literatur.bib src/* img/*
 	$(latex-it)
@@ -40,4 +44,3 @@ $(TEMP_DIR):
 $(RESULT_DIR):
 	mkdir $(RESULT_DIR)
 
-.PHONY: clean all

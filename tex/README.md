@@ -5,6 +5,11 @@ Diese Vorlage ist für Seminararbeiten mit LaTeX an der Hochschule Mannheim geda
 Diese Vorlage wurde entwickelt von [Prof. Thomas Smits](http://www.smits-net.de).
 
 
+### Cloud-Dienste
+
+Diese Vorlage wurde bereits von Studierenden erfolgreich bei Cloud-Diensten eingesetzt, mit denen man LaTeX-Dokumente schreiben, kompilieren und verwalten kann. Positive Erfahrungsberichte liegen bisher mit [Overleaf](https://www.overleaf.com) vor. Eine Anleitung zu Overleaf finden Sie weiter unten.
+
+
 ## Werkzeuge, Dateiformat
 
 Zum Erzeugen der fertigen Arbeit dient das `Makefile` im Verzeichnis `/tex`. Sie benötigen hierzu das Werkzeug `make`, das auf Linux und MacOS standardmäßig installiert ist.
@@ -34,6 +39,8 @@ Für die Verwaltung der Literaturliste wird das BibTeX-Format verwendet (Datei `
   
 Achten Sie darauf, die Dokumente im UTF-8-Format abzulegen. Nur so ist eine plattformunabhängige Verwendung gewährleistet. Die Vorlagen hier sind ebenfalls im UTF-8-Format.
 
+Verwenden Sie auf jeden Fall ein Werkzeug, um die Literatur zu verwalten. BibTex-Dateien von Hand zu bearbeiten ist extrem fehleranfällig.
+
 
 ## Aufbau der Vorlage im Verzeichnis `tex`
 
@@ -42,7 +49,7 @@ Die Vorlage besteht aus einer einzigen Datei, die Sie teilweise nach Ihren Bedü
 Anpassen müssen Sie die folgenden Dateien
 
   * `seminararbeit.tex` - Hauptdokument. Hier müssen Sie Ihren Text hineinschreiben.
-  * `literatur.bib` - Literaturdatenbank im BibTeX-Format
+  * `literatur.bib` - Literaturdatenbank im BibTeX-Format.
 
 Normalerweise nicht verändern müssen Sie
 
@@ -57,6 +64,18 @@ Neben den Dateien gibt es noch zwei Ordner
 ## Ergebnisse im Ordner `result`
 
 Die Ergebnisse finden sich im Ordner `result`. Zum einfacheren Verständnis ist hier ein fertiges Dokument, das aus den Quellen erzeugt wurde, eingecheckt.
+
+
+## LaTeX-Projekt unter Overleaf einrichten
+
+ * Laden Sie die ZIP-Version des Projektes [hier](https://github.com/informatik-mannheim/term-paper-template/raw/master/term-paper-overleaf.zip) herunter.
+ * Melden Sie sich bei [Overleaf](https://www.overleaf.com) an und loggen Sie sich ein.
+ * Gehen Sie auf "New Project" und wählen Sie "Upload Project"
+ * Laden Sie die ZIP-Datei hoch.
+ * Sie werden jetzt möglicherweise Kompile-Fehler bekommen, aber keine Panik, dies liegt daran, dass Overleaf nicht weiß, welches das Hauptdokument ist
+ * Wählen Sie das Overleaf Logo oben links, um das Einstellungsmenue aufzurufen und stellen Sie die Option "Main document" auf `seminararbeit.tex`
+ * Wählen Sie nun in der Dateiliste ebenfalls `seminararbeit.tex`
+ * Drücken Sie auf "Recompile" - das Projekt sollte jetzt bauen
 
 
 ## Latex-Projekt unter TexnicCenter einrichten
