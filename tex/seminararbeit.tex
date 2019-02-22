@@ -15,7 +15,7 @@
 \begin{abstract}
 An dieser Stelle steht eine kurze Zusammenfassung des Inhaltes des Dokuments. Der Abstrakt ist vollkommen eigenständig und hat weder Querverweise zu anderen Teilen dieser Arbeit noch Referenzen zu Quellen.
 
-Schreiben Sie die Zusammenfassung im sogenannten faktenzentrierten Stil, d.\,h. beschreiben Sie nicht das Dokument, sondern die Fakten und Informationen, die das Dokument liefert. Zum Beispiel schreiben Sie \textit{nicht} \enquote{Dieses Dokument stellt die besondere Bedeutung des Flux-Kompensators für Zeitreisen im Film \enquote{Zurück in die Zukunft} dar.}, sondern Sie \enquote{Ohne den Flux-Kompensator wären die Zeitreisen im Film \enquote{Zurück in die Zukunft} nicht möglich.}
+Schreiben Sie die Zusammenfassung im sogenannten faktenzentrierten Stil, d.\,h. beschreiben Sie nicht das Dokument, sondern die Fakten und Informationen, die das Dokument liefert. Zum Beispiel schreiben Sie \textit{nicht} \enquote{Dieses Dokument stellt die besondere Bedeutung des Flux-Kompensators für Zeitreisen im Film \enquote{Zurück in die Zukunft} dar.}, sondern schreiben Sie \enquote{Ohne den Flux-Kompensator wären die Zeitreisen im Film \enquote{Zurück in die Zukunft} nicht möglich.}
 \end{abstract}
 
 % Inhaltsverzeichnis erzeugen
@@ -34,7 +34,7 @@ Die Einleitung liefert eine generelle Darstellung des Problems, der Ziele der Ar
 Schreiben Sie die Arbeit so, dass ein fachkundiger Dritter in der Lage ist, den Text zu verstehen und die darin enthaltenen Schlüsse nachvollziehen zu können. Hierzu sollten alle nicht bekannten Fakten mit Literaturstellen belegt werden (\autoref{quellen}).
 
 \subsection{Sprache}
-Schreiben Sie in einer einfachen, gut verständlichen Sprache mit kurzen Sätzen. Schreiben sie durchgängig in der Gegenwartsform und im Aktiv (z.\,B. \enquote{\dots wird untersucht}, \enquote{\dots zeigt folgende Ergebnisse}). Nutzen Sie wenn möglich deutsche Begriffe, auf keinen Fall jedoch Mischformen wie \emph{downgeloaded} oder \emph{upgedatet}.
+Schreiben Sie in einer einfachen, gut verständlichen Sprache mit kurzen Sätzen. Schreiben sie durchgängig in der Gegenwartsform und im Aktiv (z.\,B. \enquote{\dots wird untersucht}, \enquote{\dots zeigt folgende Ergebnisse}). Nutzen Sie wenn möglich deutsche Begriffe, auf keinen Fall jedoch Mischformen wie \emph{downgeloaded} oder \emph{upgedatet}. Wenn es keinen guten deutschen Begriff gibt, dann verwenden Sie die englische Version, \zb Repository, Interrupt, etc.
 
 \subsection{Gliederung}
 Gliedern Sie die Arbeit nach logischen Kriterien. Die Gliederung der Arbeit erfolgt über \lstinline+\section{}+, \lstinline+\subsection{}+, \lstinline+\subsubsection{}+ und \lstinline+\paragraph{}+.
@@ -58,24 +58,24 @@ Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) 
 \subsection{Anführungszeichen}
 Deutsche Anführungszeichen gehen so: "`dieser Text steht in \glq Anführungszeichen\grq; alles klar?"'. Englische Anführungszeichen werden anders benutzt: ``this is an `English' quotation.''
 
-Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet.
+Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet und auch die Spracheinstellungen berücksichtigt. Sie können mehrere Anführungszeichen ineinander schachteln: \enquote{Und der Almöhi sagte \enquote{Heidi, komm heim} und steckte sich die Pfeife an.}. 
 
 \subsection{Abkürzungen}
-Abkürzungen müssen in einem Abkürzungsverzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}. Man kann allerdings die Langform explizit anfordern: \acl{ABK} oder die Kurzform \acs{ABK} oder auch noch einmal die Definition: \acf{ABK}.
+Abkürzungen müssen in einem Ab"-kürzungs"-verzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}. Man kann allerdings die Langform explizit anfordern: \acl{ABK} oder die Kurzform \acs{ABK} oder auch noch einmal die Definition: \acf{ABK}.
 
-Beachten Sie, dass bei Abkürzungen, die für zwei Wörter stehen, ein kleines Leerzeichen nach dem Punkt kommt: z.\,B. bzw. \zb, d.\,h. bzw. \dahe.
+Beachten Sie, dass bei Abkürzungen, die für zwei Wörter stehen, ein kleines Leerzeichen nach dem Punkt kommt: z.\,B. bzw. \zb, d.\,h. bzw. \dahe
 
 \subsection{Querverweise}
 Querverweise auf eine Kapitelnummer macht man im Text mit \lstinline+\ref+ (Kapitel~\ref{Einleitung:Textauszeichnungen}) und auf eine bestimmte Seite mit \lstinline+\pageref+ (Seite~\pageref{Einleitung:Textauszeichnungen}). Man kann auch den Befehl \lstinline+\autoref+ benutzen, der automatisch die Art des referenzierten Elements bestimmt (\zb \autoref{Einleitung:Textauszeichnungen}).
 
 \subsection{Fußnoten}
-Fußnoten werden einfach mit in den Text geschrieben und zwar genau an die Stelle\footnote{An der die Fußnote auftauchen soll.}
+Fußnoten werden einfach mit in den Text geschrieben und zwar genau an die Stelle\footnote{an der die Fußnote auftauchen soll.}
 
 \subsection{Fremdsprachige Begriffe}
 Wenn Sie Ihre Arbeit auf Deutsch verfassen, gehen Sie sparsam mit englischen Ausdrücken um. Natürlich brauchen Sie etablierte englische Fachbegriffe, wie z.\,B. \textit{Interrupt}, nicht zu übersetzen. Sie sollten aber immer dann, wenn es einen gleichwertigen deutschen Begriff gibt, diesem den Vorrang geben. Den englischen Begriff (\textit{term}) können Sie dann in Klammern oder in einer Fußnote\footnote{Englisch: \textit{footnote}.} erwähnen. Absolut unakzeptabel sind deutsch gebeugte englische Wörter oder Kompositionen aus deutschen und englischen Wörtern wie z.\,B. downgeloadet, upgedated, Keydruck oder Beautyzentrum.
 
 \subsection{Tabellen}
-Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \cite[S. 89]{Willberg1999}.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe \autoref{google:numbers}).
+Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \cite[S. 89]{Willberg1999}.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe \autoref{google:numbers}). Beachgen Sie, dass bei Tabellen -- anders als bei Abbildungen -- die Beschriftung über der Tabelle steht.
 
 % Tabelle
 \begin{table}[!ht]
@@ -139,7 +139,7 @@ Aufzählungen mit laufenden Nummern sind mit der \texttt{enumerate}-Umgebung mö
 \subsection{Abbildungen}
 Abbildungen sind oft sehr hilfreich, um Zusammenhänge zu verdeutlichen. Soweit möglich, sollten die Abbildungen als Vektorgrafiken eingebunden werden. Die in der Abbildung enthaltenen Schriftarten sollten nach Möglichkeit die gleichen sein, wie im restlichen Dokument. Alle Beschriftungen innerhalb der Grafik sollten gut lesbar sein.
 Graphen können farbig sein, wenn es der Lesbarkeit dient. Es sollte jedoch darauf geachtet werden, dass auch eine schwarz\-weiß-Kopie noch alle nötigen Informationen enthält (d.h. Liniendiagramme mit verschiedenen Linienarten z.\,B. Strichpunkt).
-Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (e,\.B. Screenshot), sollte die Auflösung mindestens 600 dpi betragen und die Qualität nicht durch Komprimierung (z.\,B. jpg) verschlechtert werden. Unkomprimierte oder verlustfrei komprimierte Bildformate wie \emph{png} oder \emph{bmp} sind zu bevorzugen. Nur für echte Fotos ist \emph{jpg} geeignet.
+Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (z.\,B. Screenshot), sollte die Auflösung mindestens 600 dpi betragen und die Qualität nicht durch Komprimierung (z.\,B. jpg) verschlechtert werden. Unkomprimierte oder verlustfrei komprimierte Bildformate wie \emph{png} oder \emph{bmp} sind zu bevorzugen. Nur für echte Fotos ist \emph{jpg} geeignet.
 
 % Grafik in einer Spalte
 \begin{figure}[!ht]
@@ -149,7 +149,7 @@ Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (e,\.B. Scr
 \label{fig_sim}
 \end{figure}
 
-Jede Abbildung (vgl. \autoref{fig_sim} auf Seite~\pageref{fig_sim}) und Tabelle (z.\,B. \autoref{google:numbers} auf Seite~\pageref{google:numbers}) sollte im Fließtext referenziert und behandelt werden. Die Beschriftung unter den Abbildungen sollte die Abbildung vollständig und verständlich beschreiben, auch ohne dass man den restlichen Text gelesen hat. Gleiches gilt für die Beschriftungen von Tabellen, die über die Tabellen gesetzt werden.
+Jede Abbildung (vgl. \autoref{fig_sim} auf Seite~\pageref{fig_sim}) und Tabelle (z.\,B. \autoref{google:numbers} auf Seite~\pageref{google:numbers}) sollte im Fließtext referenziert und beschrieben/erläutert werden. Die Beschriftung unter den Abbildungen sollte die Abbildung vollständig und verständlich beschreiben, auch ohne dass man den restlichen Text gelesen hat. Gleiches gilt für die Beschriftungen von Tabellen, die über die Tabellen gesetzt werden.
 
 \subsection{Formelsatz}
 Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz (siehe Formel~\ref{Formel}):
@@ -176,9 +176,13 @@ Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz
 
 % -------------------------------------------------------
 \section{Zitate und Quellenangaben}\label{quellen}
-Alle von anderen Autoren gewonnenen Erkenntnisse müssen mit Quellen belegt werden. Falls Sie wörtlich zitieren werden, so muss der Text originalgetreu in Anführungszeichen wiedergegeben werden. Wird ein Teil des Textes ausgelassen, so werden Punkte in eckigen Klammern [\,\dots] an die Stelle der Auslassung gesetzt. Zusätze innerhalb des zitierten Textes bedürfen eckiger Klammern []. Gehen Sie sparsam mit wörtlichen Zitaten um. Längere wörtliche Zitate werden i.\,a. eingerückt.
+Alle von anderen Autoren gewonnenen Erkenntnisse müssen mit Quellen belegt werden. Falls Sie wörtlich zitieren werden, so muss der Text originalgetreu in Anführungszeichen wiedergegeben werden. Wird ein Teil des Textes ausgelassen, so werden Punkte in eckigen Klammern [\,\dots] an die Stelle der Auslassung gesetzt. Zusätze innerhalb des zitierten Textes bedürfen eckiger Klammern []. Gehen Sie sparsam mit wörtlichen Zitaten um. Längere wörtliche Zitate werden i.\,a. eingerückt. Hierzu dient die \textit{quotation}-Umgebung.
 
-Die Zitierweise muss im gesamten Text einheitlich sein. Für diese Vorlage ist die Zitierweise nach IEEE eingestellt, die Sie nicht ändern sollten.
+\begin{quotation}
+Dies ist ein längeres Zitat, dass in einer Quotation-Umgebung gesetzt wurde. Es hat keine Anführungszeichen aber am Ende natürlich eine Quellenangabe.\cite{Kornmeier2011} 
+\end{quotation}
+
+Die Zitierweise muss im gesamten Text einheitlich sein.
 
 Wichtig ist, dass das Übernehmen von fremden Textstellen ohne entsprechende Kennzeichnung der Herkunft in einer wissenschaftlichen Arbeit nicht akzeptabel ist. Plagiate werden mit der Note 5.0 bewertet.
 
@@ -191,11 +195,11 @@ Verwenden Sie das wörtliche Zitat nur dann, wenn es aus dem Kontext heraus sinn
 
 Insbesondere bei fremdsprachigen Quellen sollten Sie keine Original-Sätze zitieren, um sie dann mit eigenen Worten im Deutschen zu wiederholen (Ausnahme wie oben, wenn etwa die Wortwahl oder die Aussage besonders prägnant ist). Statt dessen sollten Sie den Text in ihren eigenen Worten in Deutsch formulieren, und dann die Quelle angeben.
 
-Verwenden Sie die Namen des Autors / der Autoren nur dann, wenn a) Sie es für wichtig finden, zu sagen, dass diese Aussage von genau diesem Autor / diesen Autoren getroffen wurde (etwa bei einer Definition, oder bei einer Gegenüberstellung) oder b) Sie deutlich machen wollen, dass die Aussage nicht von Ihnen stammt (was man aus dem Kontext sonst eventuell missverstehen könnte).
+Verwenden Sie die Namen des Autors/der Autoren nur dann, wenn a) Sie es wichtig finden, zu sagen, dass diese Aussage von genau diesem Autor/diesen Autoren getroffen wurde (etwa bei einer Definition, oder bei einer Gegenüberstellung) oder b) Sie deutlich machen wollen, dass die Aussage nicht von Ihnen stammt (was man aus dem Kontext sonst eventuell missverstehen könnte).
 
 Verwenden Sie Seitenzahlen bei der Angabe einer Quelle nur dann, wenn das für das Verständnis wichtig ist. Entnehmen Sie \enquote{Wissen} aus einem Paper an mehreren Stellen, dann reicht die Angabe des Papers. Ist es wichtig, die Stelle zu markieren (z.B. weil ein bestimmtes Argument referenziert wird), dann ergänzen Sie die Seite.
 
-Insgesamt kann man sagen, dass Sie technische / Informatik- / Wirtschaftsinformatik-Sachverhalte mit eigenen Worten formulieren sollen, und jeweils kennzeichnen, wo der \enquote{Input} hergekommen ist. Eine explizite Nennung von Autor oder Seite ist nur dann erforderlich, wenn es auch Sinn macht, dies hervorzuheben.
+Insgesamt kann man sagen, dass Sie Sachverhalte mit eigenen Worten formulieren sollen, und jeweils kennzeichnen, wo der \enquote{Input} hergekommen ist. Eine explizite Nennung von Autor ist nur dann erforderlich, wenn es auch Sinn macht, diesen hervorzuheben.
 
 Damit sollten Sie ein Plagiat vermeiden können, ohne extensiv zu zitieren. Umgekehrt schützt extensives Zitieren auch nicht vor einem Plagiat (z.\,B. wenn Sie einen englischen Text in Google Translation stecken, den übersetzten Text als Ihren eigenen ausgeben, und dann die Quelle ergänzen, ist das ein Plagiat).
 
@@ -217,13 +221,15 @@ Am einfachsten ist es, wenn Sie das \lstinline+\autocite{}+-Kommando verwenden. 
 	\item \lstinline+\fullcite{Willberg1999}+: \fullcite{Willberg1999}
 \end{itemize}
 
+\textit{Für die Veranstaltung WIA ist der Zitierstil mit IEEE festgelegt und Sie sollten die Einstellungen am Template nicht verändern. Am besten, Sie verwenden einfach}  \lstinline+\autocite{}+ \textit{und machen sich dann keine Gedanken mehr um den Stil.} 
+
 \subsection{Zitieren von Internetquellen}
 Internetquellen sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}}
 
 Wenn ausnahmsweise doch eine Internetquelle zitiert werden muss, z.\,B. weil für eine Arbeit dort Informationen zu einem beschriebenen Unternehmen abgerufen wurden, sind folgende Punkte zu beachten:
 
 \begin{itemize}
-\item Die Webseite ist auszudrucken und im Anhang der Arbeit beizufügen,
+\item Die Webseite ist auszudrucken und im Anhang der Arbeit beizufügens oder als PDF zusammen mit der Arbeit auf einem Datenträger einzureichen,
 \item das Datum des Abrufs und die URL sind anzugeben,
 \item verwenden Sie Internet-Seiten ausschließlich zu illustrativen Zwecken (z.\,B. um einen Sachverhalt noch etwas genauer zu erläutern), aber nicht zur Faktenvermittlung (z.\,B. um eine Ihrer Thesen zu belegen).
 \end{itemize}
