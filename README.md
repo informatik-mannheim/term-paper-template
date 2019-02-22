@@ -72,7 +72,7 @@ Die Ergebnisse finden sich im Ordner `result`. Zum einfacheren Verständnis ist 
  * Melden Sie sich bei [Overleaf](https://www.overleaf.com) an und loggen Sie sich ein.
  * Gehen Sie auf "New Project" und wählen Sie "Upload Project"
  * Laden Sie die ZIP-Datei hoch.
- * Sie werden jetzt möglicherweise Kompile-Fehler bekommen, aber keine Panik, dies liegt daran, dass Overleaf nicht weiß, welches das Hauptdokument ist
+ * Sie werden jetzt möglicherweise Compile-Fehler bekommen, aber keine Panik, dies liegt daran, dass Overleaf nicht weiß, welches das Hauptdokument ist
  * Wählen Sie das Overleaf Logo oben links, um das Einstellungsmenue aufzurufen und stellen Sie die Option "Main document" auf `seminararbeit.tex`
  * Wählen Sie nun in der Dateiliste ebenfalls `seminararbeit.tex`
  * Drücken Sie auf "Recompile" - das Projekt sollte jetzt bauen
