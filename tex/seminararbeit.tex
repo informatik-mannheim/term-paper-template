@@ -48,131 +48,6 @@ Zur Qualitätssicherung Ihrer Arbeit ist u.\,a. folgende Vorgehensweise hilfreic
 \end{itemize}
 
 
-% -------------------------------------------------------
-\section{Typographie}
-\subsection{Hervorhebungen}\label{Einleitung:Textauszeichnungen}
-Achten Sie bitte auf die grundlegenden Regeln der Typographie\footnote{Ein Ratgeber in allen Detailfragen ist \cite{Forssman2002}.}, wenn Sie Ihren Text schreiben. Hierzu gehören \zb die Verwendung der richtigen "`Anführungszeichen"' und der Unterschied zwischen Binde- (-), Gedankenstrich (--) und langem Strich (---).
-
-Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) und nicht \textbf{fett} (Bold). Fettdruck ist Überschriften vorbehalten; im Fließtext stört er den Lesefluss. Das \underline{Unterstreichen} von Fließtext ist im gesamten Dokument tabu und kann maximal bei Pseudo-Code vorkommen.
-
-\subsection{Anführungszeichen}
-Deutsche Anführungszeichen gehen so: "`dieser Text steht in \glq Anführungszeichen\grq; alles klar?"'. Englische Anführungszeichen werden anders benutzt: ``this is an `English' quotation.''
-
-Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet und auch die Spracheinstellungen berücksichtigt. Sie können mehrere Anführungszeichen ineinander schachteln: \enquote{Und der Almöhi sagte \enquote{Heidi, komm heim} und steckte sich die Pfeife an.}. 
-
-\subsection{Abkürzungen}
-Abkürzungen müssen in einem Ab"-kürzungs"-verzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}. Man kann allerdings die Langform explizit anfordern: \acl{ABK} oder die Kurzform \acs{ABK} oder auch noch einmal die Definition: \acf{ABK}.
-
-Beachten Sie, dass bei Abkürzungen, die für zwei Wörter stehen, ein kleines Leerzeichen nach dem Punkt kommt: z.\,B. bzw. \zb, d.\,h. bzw. \dahe
-
-\subsection{Querverweise}
-Querverweise auf eine Kapitelnummer macht man im Text mit \lstinline+\ref+ (Kapitel~\ref{Einleitung:Textauszeichnungen}) und auf eine bestimmte Seite mit \lstinline+\pageref+ (Seite~\pageref{Einleitung:Textauszeichnungen}). Man kann auch den Befehl \lstinline+\autoref+ benutzen, der automatisch die Art des referenzierten Elements bestimmt (\zb \autoref{Einleitung:Textauszeichnungen}).
-
-\subsection{Fußnoten}
-Fußnoten werden einfach mit in den Text geschrieben und zwar genau an die Stelle\footnote{an der die Fußnote auftauchen soll.}
-
-\subsection{Fremdsprachige Begriffe}
-Wenn Sie Ihre Arbeit auf Deutsch verfassen, gehen Sie sparsam mit englischen Ausdrücken um. Natürlich brauchen Sie etablierte englische Fachbegriffe, wie z.\,B. \textit{Interrupt}, nicht zu übersetzen. Sie sollten aber immer dann, wenn es einen gleichwertigen deutschen Begriff gibt, diesem den Vorrang geben. Den englischen Begriff (\textit{term}) können Sie dann in Klammern oder in einer Fußnote\footnote{Englisch: \textit{footnote}.} erwähnen. Absolut unakzeptabel sind deutsch gebeugte englische Wörter oder Kompositionen aus deutschen und englischen Wörtern wie z.\,B. downgeloadet, upgedated, Keydruck oder Beautyzentrum.
-
-\subsection{Tabellen}
-Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \cite[S. 89]{Willberg1999}.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe \autoref{google:numbers}). Beachgen Sie, dass bei Tabellen -- anders als bei Abbildungen -- die Beschriftung über der Tabelle steht.
-
-% Tabelle
-\begin{table}[!ht]
-\centering
-\rmfamily
-\caption{Zeitbedarf für ausgewählte Aktionen, nach~\cite{Dean2012}}
-\renewcommand{\arraystretch}{1.1}
-\sffamily
-\begin{footnotesize}
-\begin{tabular}{l r}
-\toprule
-\textbf{Vorgang} & \textbf{Zeitbedarf} \\
-\midrule
-L1 cache reference                  & 0,5 ns\\
-Branch mispredict                   & 5 ns\\
-L2 cache reference                  & 7 ns\\
-Mutex lock/unlock                   & 100 ns\\
-Main memory reference               & 100 ns\\
-Compress 1K bytes with Zippy        & 10.000 ns\\
-Send 2K bytes over 1 Gbps network   & 20.000 ns\\
-Read 1 MB sequentially from memory  & 250.000 ns\\
-Round trip within same datacenter   & 500.000 ns\\
-Disk seek                           & 10.000.000 ns\\
-Read 1 MB sequentially from network & 10.000.000 ns\\
-Read 1 MB sequentially from disk    & 30.000.000 ns\\
-Send packet CA-Netherlands-CA       & 150.000.000 ns\\
-\bottomrule
-\end{tabular}
-\end{footnotesize}
-\label{google:numbers}
-\end{table}
-
-\subsection{Aufzählungen}
-Aufzählungen werden mit der \texttt{itemize}-Umgebung erzeugt und können auch einfach ineinander geschachtelt werden.
-
-\begin{itemize}
-  \item Ein wichtiger Punkt
-  \item Noch ein wichtiger Punkt
-  \item Ein Punkt mit Unterpunkten
-    \begin{itemize}
-      \item Unterpunkt 1
-      \item Unterpunkt 2
-    \end{itemize}
-  \item Ein abschließender Punkt ohne Unterpunkte
-\end{itemize}
-
-
-Aufzählungen mit laufenden Nummern sind mit der \texttt{enumerate}-Umgebung möglich.
-
-\begin{enumerate}
-  \item Ein wichtiger Punkt
-  \item Noch ein wichtiger Punkt
-  \item Ein Punkt mit Unterpunkten
-    \begin{enumerate}
-      \item Unterpunkt 1
-      \item Unterpunkt 2
-    \end{enumerate}
-  \item Ein abschließender Punkt ohne Unterpunkte
-\end{enumerate}
-
-\subsection{Abbildungen}
-Abbildungen sind oft sehr hilfreich, um Zusammenhänge zu verdeutlichen. Soweit möglich, sollten die Abbildungen als Vektorgrafiken eingebunden werden. Die in der Abbildung enthaltenen Schriftarten sollten nach Möglichkeit die gleichen sein, wie im restlichen Dokument. Alle Beschriftungen innerhalb der Grafik sollten gut lesbar sein.
-Graphen können farbig sein, wenn es der Lesbarkeit dient. Es sollte jedoch darauf geachtet werden, dass auch eine schwarz\-weiß-Kopie noch alle nötigen Informationen enthält (d.h. Liniendiagramme mit verschiedenen Linienarten z.\,B. Strichpunkt).
-Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (z.\,B. Screenshot), sollte die Auflösung mindestens 600 dpi betragen und die Qualität nicht durch Komprimierung (z.\,B. jpg) verschlechtert werden. Unkomprimierte oder verlustfrei komprimierte Bildformate wie \emph{png} oder \emph{bmp} sind zu bevorzugen. Nur für echte Fotos ist \emph{jpg} geeignet.
-
-% Grafik in einer Spalte
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=8.5cm]{bsp1}
-\caption{Beispielgrafik~\cite{Dean2012}}
-\label{fig_sim}
-\end{figure}
-
-Jede Abbildung (vgl. \autoref{fig_sim} auf Seite~\pageref{fig_sim}) und Tabelle (z.\,B. \autoref{google:numbers} auf Seite~\pageref{google:numbers}) sollte im Fließtext referenziert und beschrieben/erläutert werden. Die Beschriftung unter den Abbildungen sollte die Abbildung vollständig und verständlich beschreiben, auch ohne dass man den restlichen Text gelesen hat. Gleiches gilt für die Beschriftungen von Tabellen, die über die Tabellen gesetzt werden.
-
-\subsection{Formelsatz}
-Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz (siehe Formel~\ref{Formel}):
-
-\begin{equation}
-\begin{bmatrix}
-   1 &  4 &  2 \\
-   4 &  0 & -3
-\end{bmatrix}
-        \cdot
-\begin{bmatrix}
-   1 &  1 &  0 \\
-  -2 &  3 &  5 \\
-   0 &  1 &  4
-\end{bmatrix}
-       {=}
-\begin{bmatrix}
-  -7 &  15 &  28 \\
-   4 &   1 & -12
-\end{bmatrix}
-\label{Formel}
-\end{equation}
-
 
 % -------------------------------------------------------
 \section{Zitate und Quellenangaben}\label{quellen}
@@ -250,6 +125,129 @@ Wo werden die Quellen zu einem Zitat bzw. die Belege zu einer Aussage platziert?
 \item Wenn es sich um ein langes wörtliches Zitat handelt, wird es eingerückt und ohne Anführungszeichen gesetzt, wobei die Quelle am Ende angegeben wird. Hierzu verwendet man die \texttt{quote}-Umgebung in \LaTeX.
 \end{itemize}
 
+% -------------------------------------------------------
+\section{Typographie}
+\subsection{Hervorhebungen}\label{Einleitung:Textauszeichnungen}
+Achten Sie bitte auf die grundlegenden Regeln der Typographie\footnote{Ein Ratgeber in allen Detailfragen ist \cite{Forssman2002}.}, wenn Sie Ihren Text schreiben. Hierzu gehören \zb die Verwendung der richtigen "`Anführungszeichen"' und der Unterschied zwischen Binde- (-), Gedankenstrich (--) und langem Strich (---).
+
+Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) und nicht \textbf{fett} (Bold). Fettdruck ist Überschriften vorbehalten; im Fließtext stört er den Lesefluss. Das \underline{Unterstreichen} von Fließtext ist im gesamten Dokument tabu und kann maximal bei Pseudo-Code vorkommen.
+
+\subsection{Anführungszeichen}
+Deutsche Anführungszeichen gehen so: "`dieser Text steht in \glq Anführungszeichen\grq; alles klar?"'. Englische Anführungszeichen werden anders benutzt: ``this is an `English' quotation.''
+
+Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet und auch die Spracheinstellungen berücksichtigt. Sie können mehrere Anführungszeichen ineinander schachteln: \enquote{Und der Almöhi sagte \enquote{Heidi, komm heim} und steckte sich die Pfeife an.}. 
+
+\subsection{Abkürzungen}
+Abkürzungen müssen in einem Ab"-kürzungs"-verzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}. Man kann allerdings die Langform explizit anfordern: \acl{ABK} oder die Kurzform \acs{ABK} oder auch noch einmal die Definition: \acf{ABK}.
+
+Beachten Sie, dass bei Abkürzungen, die für zwei Wörter stehen, ein kleines Leerzeichen nach dem Punkt kommt: z.\,B. bzw. \zb, d.\,h. bzw. \dahe
+
+\subsection{Querverweise}
+Querverweise auf eine Kapitelnummer macht man im Text mit \lstinline+\ref+ (Kapitel~\ref{Einleitung:Textauszeichnungen}) und auf eine bestimmte Seite mit \lstinline+\pageref+ (Seite~\pageref{Einleitung:Textauszeichnungen}). Man kann auch den Befehl \lstinline+\autoref+ benutzen, der automatisch die Art des referenzierten Elements bestimmt (\zb \autoref{Einleitung:Textauszeichnungen}).
+
+\subsection{Fußnoten}
+Fußnoten werden einfach mit in den Text geschrieben und zwar genau an die Stelle\footnote{an der die Fußnote auftauchen soll.}
+
+\subsection{Fremdsprachige Begriffe}
+Wenn Sie Ihre Arbeit auf Deutsch verfassen, gehen Sie sparsam mit englischen Ausdrücken um. Natürlich brauchen Sie etablierte englische Fachbegriffe, wie z.\,B. \textit{Interrupt}, nicht zu übersetzen. Sie sollten aber immer dann, wenn es einen gleichwertigen deutschen Begriff gibt, diesem den Vorrang geben. Den englischen Begriff (\textit{term}) können Sie dann in Klammern oder in einer Fußnote\footnote{Englisch: \textit{footnote}.} erwähnen. Absolut unakzeptabel sind deutsch gebeugte englische Wörter oder Kompositionen aus deutschen und englischen Wörtern wie z.\,B. downgeloadet, upgedated, Keydruck oder Beautyzentrum.
+
+\subsection{Tabellen}
+Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \cite[S. 89]{Willberg1999}.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe \autoref{google:numbers}). Beachgen Sie, dass bei Tabellen -- anders als bei Abbildungen -- die Beschriftung über der Tabelle steht.
+
+% Tabelle
+\begin{table}[!ht]
+\centering
+\rmfamily
+\caption{Zeitbedarf für ausgewählte Aktionen, nach~\cite{Dean2012}}
+\renewcommand{\arraystretch}{1.1}
+\sffamily
+\begin{footnotesize}
+\begin{tabular}{l r}
+\toprule
+\textbf{Vorgang} & \textbf{Zeitbedarf} \\
+\midrule
+L1 cache reference                  & 0,5 ns\\
+Branch mispredict                   & 5 ns\\
+L2 cache reference                  & 7 ns\\
+Mutex lock/unlock                   & 100 ns\\
+Main memory reference               & 100 ns\\
+Compress 1K bytes with Zippy        & 10.000 ns\\
+Send 2K bytes over 1 Gbps network   & 20.000 ns\\
+Read 1 MB sequentially from memory  & 250.000 ns\\
+Round trip within same datacenter   & 500.000 ns\\
+Disk seek                           & 10.000.000 ns\\
+Read 1 MB sequentially from network & 10.000.000 ns\\
+Read 1 MB sequentially from disk    & 30.000.000 ns\\
+Send packet CA-Netherlands-CA       & 150.000.000 ns\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\label{google:numbers}
+\end{table}
+
+\subsection{Aufzählungen}
+Aufzählungen werden mit der \texttt{itemize}-Umgebung erzeugt und können auch einfach ineinander geschachtelt werden.
+
+\begin{itemize}
+  \item Ein wichtiger Punkt
+  \item Noch ein wichtiger Punkt
+  \item Ein Punkt mit Unterpunkten
+    \begin{itemize}
+      \item Unterpunkt 1
+      \item Unterpunkt 2
+    \end{itemize}
+  \item Ein abschließender Punkt ohne Unterpunkte
+\end{itemize}
+
+Aufzählungen mit laufenden Nummern sind mit der \texttt{enumerate}-Umgebung möglich.
+
+\begin{enumerate}
+  \item Ein wichtiger Punkt
+  \item Noch ein wichtiger Punkt
+  \item Ein Punkt mit Unterpunkten
+    \begin{enumerate}
+      \item Unterpunkt 1
+      \item Unterpunkt 2
+    \end{enumerate}
+  \item Ein abschließender Punkt ohne Unterpunkte
+\end{enumerate}
+
+\subsection{Abbildungen}
+Abbildungen sind oft sehr hilfreich, um Zusammenhänge zu verdeutlichen. Soweit möglich, sollten die Abbildungen als Vektorgrafiken eingebunden werden. Die in der Abbildung enthaltenen Schriftarten sollten nach Möglichkeit die gleichen sein, wie im restlichen Dokument. Alle Beschriftungen innerhalb der Grafik sollten gut lesbar sein.
+Graphen können farbig sein, wenn es der Lesbarkeit dient. Es sollte jedoch darauf geachtet werden, dass auch eine schwarz\-weiß-Kopie noch alle nötigen Informationen enthält (d.h. Liniendiagramme mit verschiedenen Linienarten z.\,B. Strichpunkt).
+Falls eine Abbildung nur in Form einer Bitmap realisiert werden kann (z.\,B. Screenshot), sollte die Auflösung mindestens 600 dpi betragen und die Qualität nicht durch Komprimierung (z.\,B. jpg) verschlechtert werden. Unkomprimierte oder verlustfrei komprimierte Bildformate wie \emph{png} oder \emph{bmp} sind zu bevorzugen. Nur für echte Fotos ist \emph{jpg} geeignet.
+
+% Grafik in einer Spalte
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=8.5cm]{bsp1}
+\caption{Beispielgrafik~\cite{Dean2012}}
+\label{fig_sim}
+\end{figure}
+
+Jede Abbildung (vgl. \autoref{fig_sim} auf Seite~\pageref{fig_sim}) und Tabelle (z.\,B. \autoref{google:numbers} auf Seite~\pageref{google:numbers}) sollte im Fließtext referenziert und beschrieben/erläutert werden. Die Beschriftung unter den Abbildungen sollte die Abbildung vollständig und verständlich beschreiben, auch ohne dass man den restlichen Text gelesen hat. Gleiches gilt für die Beschriftungen von Tabellen, die über die Tabellen gesetzt werden.
+
+\subsection{Formelsatz}
+Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz (siehe Formel~\ref{Formel}):
+
+\begin{equation}
+\begin{bmatrix}
+   1 &  4 &  2 \\
+   4 &  0 & -3
+\end{bmatrix}
+        \cdot
+\begin{bmatrix}
+   1 &  1 &  0 \\
+  -2 &  3 &  5 \\
+   0 &  1 &  4
+\end{bmatrix}
+       {=}
+\begin{bmatrix}
+  -7 &  15 &  28 \\
+   4 &   1 & -12
+\end{bmatrix}
+\label{Formel}
+\end{equation}
 
 % --------------------------------------------------------------------
 \section*{Abkürzungen}
