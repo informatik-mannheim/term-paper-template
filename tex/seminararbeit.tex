@@ -1,4 +1,3 @@
-%% Preambel
 \documentclass[conference,compsoc,final,a4paper]{IEEEtran}
 \usepackage[utf8]{inputenx}
 
@@ -7,6 +6,27 @@
 \newcommand{\dokumententitel}[0]{Vorlage für eine Seminararbeit}
 
 \input{preambel} % Weitere Einstellungen aus einer anderen Datei lesen
+
+\begin{document}
+
+% Titel des Dokuments
+\title{\dokumententitel}
+
+% Namen der Autoren
+\author{
+  \IEEEauthorblockN{\autoren}
+  \IEEEauthorblockA{
+    Hochschule Mannheim\\
+    Fakultät für Informatik\\
+    Paul-Wittsack-Str. 10,
+    68163 Mannheim
+    }
+}
+
+% Titel erzeugen
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
 
 % Eigentliches Dokument beginnt hier
 % ----------------------------------------------------------------------------------------------------------
