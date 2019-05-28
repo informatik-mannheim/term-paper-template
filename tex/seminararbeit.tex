@@ -77,7 +77,7 @@ Zur Qualitätssicherung Ihrer Arbeit ist u.\,a. folgende Vorgehensweise hilfreic
 Alle von anderen Autoren gewonnenen Erkenntnisse müssen mit Quellen belegt werden. Falls Sie wörtlich zitieren werden, so muss der Text originalgetreu in Anführungszeichen wiedergegeben werden. Wird ein Teil des Textes ausgelassen, so werden Punkte in eckigen Klammern [\,\dots] an die Stelle der Auslassung gesetzt. Zusätze innerhalb des zitierten Textes bedürfen eckiger Klammern []. Gehen Sie sparsam mit wörtlichen Zitaten um. Längere wörtliche Zitate werden i.\,a. eingerückt. Hierzu dient die \textit{quotation}-Umgebung.
 
 \begin{quotation}
-Dies ist ein längeres Zitat, dass in einer Quotation-Umgebung gesetzt wurde. Es hat keine Anführungszeichen aber am Ende natürlich eine Quellenangabe.\cite{Kornmeier2011} 
+Dies ist ein längeres Zitat, dass in einer Quotation-Umgebung gesetzt wurde. Es hat keine Anführungszeichen aber am Ende natürlich eine Quellenangabe \cite{Kornmeier2011}.
 \end{quotation}
 
 Die Zitierweise muss im gesamten Text einheitlich sein.
@@ -93,7 +93,7 @@ Verwenden Sie das wörtliche Zitat nur dann, wenn es aus dem Kontext heraus sinn
 
 Insbesondere bei fremdsprachigen Quellen sollten Sie keine Original-Sätze zitieren, um sie dann mit eigenen Worten im Deutschen zu wiederholen (Ausnahme wie oben, wenn etwa die Wortwahl oder die Aussage besonders prägnant ist). Statt dessen sollten Sie den Text in ihren eigenen Worten in Deutsch formulieren, und dann die Quelle angeben.
 
-Verwenden Sie die Namen des Autors/der Autoren nur dann, wenn 
+Verwenden Sie die Namen des Autors/der Autoren nur dann, wenn
 
 \begin{enumerate}
 \item Sie es wichtig finden, zu sagen, dass diese Aussage von genau diesem Autor/diesen Autoren getroffen wurde (etwa bei einer Definition, oder bei einer Gegenüberstellung) oder
@@ -124,10 +124,10 @@ Am einfachsten ist es, wenn Sie das \lstinline+\autocite{}+-Kommando verwenden. 
 	\item \lstinline+\fullcite{Willberg1999}+: \fullcite{Willberg1999}
 \end{itemize}
 
-\textit{Für die Veranstaltung WIA ist der Zitierstil mit IEEE festgelegt und Sie sollten die Einstellungen am Template nicht verändern. Am besten, Sie verwenden einfach}  \lstinline+\autocite{}+ \textit{und machen sich dann keine Gedanken mehr um den Stil.} 
+\textit{Für die Veranstaltung WIA ist der Zitierstil mit IEEE festgelegt und Sie sollten die Einstellungen am Template nicht verändern. Am besten, Sie verwenden einfach}  \lstinline+\autocite{}+ \textit{und machen sich dann keine Gedanken mehr um den Stil.}
 
 \subsection{Zitieren von Internetquellen}
-Internetquellen sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}}
+Internetquellen sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}.}
 
 Wenn ausnahmsweise doch eine Internetquelle zitiert werden muss, z.\,B. weil für eine Arbeit dort Informationen zu einem beschriebenen Unternehmen abgerufen wurden, sind folgende Punkte zu beachten:
 
@@ -145,9 +145,9 @@ Wikipedia stellt einen immensen Wissensfundus dar und enthält zu vielen Themen 
 Wo werden die Quellen zu einem Zitat bzw. die Belege zu einer Aussage platziert?
 
 \begin{itemize}
-\item Wenn die Quelle sich auf den ganzen Satz bezieht: Am Ende des Satzes \textit{nach} dem Punkt:\\ \textit{Ein Muggle ist ein Mensch ohne Zauberkräfte. [1, S. 124] Ein Dementor ist ein Untoter. [2, S. 234]}
+\item Wenn die Quelle sich auf den ganzen Satz bezieht: Am Ende des Satzes \textit{vor} dem Punkt:\\ \textit{Ein Muggle ist ein Mensch ohne Zauberkräfte [1, S. 124]. Ein Dementor ist ein Untoter [2, S. 234].}
 \item Wenn der Autor herausgestellt werden soll: Am Anfang des Satzes:\\ \textit{Rowling [2, S. 234] beschreibt den Muggle als Menschen ohne Zauberkräfte.}
-\item Wenn der Autor herausgestellt werden soll aber der Absatz lang ist, am Ende des Absatzes:\\ \textit{Rowling beschreibt den Muggle als Menschen ohne Zauberkräfte... [2, S. 234]}
+\item Wenn der Autor herausgestellt werden soll aber der Absatz lang ist, am Ende des Absatzes:\\ \textit{Rowling beschreibt den Muggle als Menschen ohne Zauberkräfte... [2, S. 234].}
 \item Wenn die Quelle sich auf ein \textit{kurzes} wörtliches Zitat bezieht, direkt nach dem Zitat, vor dem Punkt:\\ \textit{Hermine behauptet, dass \enquote{Harry Potter der weltgrößte Zauberer} [1, S. 20] sei.}
 \item Wenn die Quelle sich auf einen Begriff oder Teil des Satzes bezieht, direkt \textit{nach dem Begriff}, auf den sich die Quelle bezieht:\\ \textit{Man unterscheidet bei Harry Potter Muggle [2, S. 124] und Zauberer [2, S. 133].}
 \item Wenn es sich um ein langes wörtliches Zitat handelt, wird es eingerückt und ohne Anführungszeichen gesetzt, wobei die Quelle am Ende angegeben wird. Hierzu verwendet man die \texttt{quote}-Umgebung in \LaTeX.
@@ -163,7 +163,7 @@ Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) 
 \subsection{Anführungszeichen}
 Deutsche Anführungszeichen gehen so: "`dieser Text steht in \glq Anführungszeichen\grq; alles klar?"'. Englische Anführungszeichen werden anders benutzt: ``this is an `English' quotation.''
 
-Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet und auch die Spracheinstellungen berücksichtigt. Sie können mehrere Anführungszeichen ineinander schachteln: \enquote{Und der Almöhi sagte \enquote{Heidi, komm heim} und steckte sich die Pfeife an.}. 
+Am besten Sie verwenden das Paket \textit{csquotes}, dass über das Makro \lstinline+\enquote+ immer die richtigen \enquote{Anführungszeichen} bietet und auch die Spracheinstellungen berücksichtigt. Sie können mehrere Anführungszeichen ineinander schachteln: \enquote{Und der Almöhi sagte \enquote{Heidi, komm heim} und steckte sich die Pfeife an.}.
 
 \subsection{Abkürzungen}
 Abkürzungen müssen in einem Ab"-kürzungs"-verzeichnis aufgeführt und bei der ersten Verwendung auch ausgeschrieben werden, also z.\,B. \ac{AES} bei der ersten Verwendung, danach einfach nur \ac{AES}. Man kann allerdings die Langform explizit anfordern: \acl{ABK} oder die Kurzform \acs{ABK} oder auch noch einmal die Definition: \acf{ABK}.
