@@ -26,7 +26,7 @@ Sie können auch eine integrierte Entwicklungsumgebung verwenden. Hierbei haben 
 
   * [TeXnicenter](http://www.texniccenter.org/) für Windows
   * [Texmaker](http://www.xm1math.net/texmaker/) für Windows, MacOS und Linux
- 
+
 Außerdem müssen sie LaTeX auf Ihrem Rechner installieren. Bei Linux erfolgt dies einfach über den Paketmanager der verwendeten Distribution. Für Windows und MacOS empfehlen sich:
 
   * [MikTeX](http://miktex.org/) für Windows
@@ -36,7 +36,7 @@ Für die Verwaltung der Literaturliste wird das BibTeX-Format verwendet (Datei `
 
   * [JabRef](http://jabref.sourceforge.net/) für Windows, MacOS und Linux
   * [BibDesk](http://bibdesk.sourceforge.net/) für MacOS
-  
+
 Achten Sie darauf, die Dokumente im UTF-8-Format abzulegen. Nur so ist eine plattformunabhängige Verwendung gewährleistet. Die Vorlagen hier sind ebenfalls im UTF-8-Format.
 
 Verwenden Sie auf jeden Fall ein Werkzeug, um die Literatur zu verwalten. BibTex-Dateien von Hand zu bearbeiten ist extrem fehleranfällig.
@@ -76,6 +76,20 @@ Die Ergebnisse finden sich im Ordner `result`. Zum einfacheren Verständnis ist 
  * Wählen Sie das Overleaf Logo oben links, um das Einstellungsmenue aufzurufen und stellen Sie die Option "Main document" auf `seminararbeit.tex`
  * Wählen Sie nun in der Dateiliste ebenfalls `seminararbeit.tex`
  * Drücken Sie auf "Recompile" - das Projekt sollte jetzt bauen
+
+## LaTeX-Projekt unter Texmaker einrichten
+
+[Texmaker](https://www.xm1math.net/texmaker/) unterstützt alle Betriebssysteme.
+
+  * Öffnen Sie die Datei `seminararbeit.tex` mit Texmaker
+  * Gehen Sie auf "Options" -> "Define current document as 'Master Document'"
+  * Gehen Sie auf "Options" -> "Configure Texmaker"
+    * Tragen Sie unter "Commands" -> "Bib(la)tex" als Kommando `biber %` ein<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/biber.png" width="400">
+    * Wählen Sie unter "Quick Build" die Option "PdfLaTeX + Bib(la)tex + BdfLaTeX (x2) + View Pdf<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/quick_build.png" width="400">
+  * Wählen Sie in der Menuezeile "Quick Build" aus<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/run.png" width="150">
+  * Klicken Sie auf den Pfeil links von "Quick Build"
+  * Das Dokument sollte gebaut werden und rechts im Bildschirm erscheinen
+
 
 
 ## Latex-Projekt unter TexnicCenter einrichten
