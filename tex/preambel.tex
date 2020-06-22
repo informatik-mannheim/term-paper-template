@@ -8,7 +8,14 @@
 \usepackage{dblfloatfix}
 \usepackage{url}
 \usepackage[autostyle=true,german=quotes]{csquotes}
-\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage[backend=biber,
+            sorting=none,   % Keine Sortierung
+            doi=true,       % DOI anzeigen
+            isbn=false,     % ISBN nicht anzeigen
+            url=true,       % URLs anzeigen
+            maxnames=6,     % Ab 6 Autoren et al. verwenden
+            minnames=1,     % und nur den ersten Autor angeben
+            style=ieee,]{biblatex}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{listings}             % Source Code listings
@@ -33,6 +40,10 @@
 \definecolor{operator}{RGB}{0, 0, 0}
 
 \usepackage[ngerman]{betababel}
+
+\DefineBibliographyStrings{ngerman}{
+    andothers = {{et al\adddot}},  % Immer et al. sagen, auch bei Deutsch als Sprache
+}
 \usepackage[
       unicode=true,
       hypertexnames=false,
@@ -44,6 +55,7 @@
       pdftex
    ]{hyperref}
 %	 \PrerenderUnicode{ü}
+
 
 % Einstellungen für Quelltexte
 \lstset{
