@@ -41,6 +41,7 @@ Achten Sie darauf, die Dokumente im UTF-8-Format abzulegen. Nur so ist eine plat
 
 Verwenden Sie auf jeden Fall ein Werkzeug, um die Literatur zu verwalten. BibTex-Dateien von Hand zu bearbeiten ist extrem fehleranfällig.
 
+Weitere Informationen zu Abhängigkeiten des Templates und den aufgezeigten Werkzeugen (z.B. Pakete unter Linux) finden Sie in der Datei [INSTALL.md](https://github.com/informatik-mannheim/term-paper-template/blob/master/INSTALL.md).
 
 ## Aufbau der Vorlage im Verzeichnis `tex`
 
