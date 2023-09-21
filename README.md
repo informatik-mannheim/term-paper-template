@@ -7,7 +7,7 @@ Diese Vorlage wurde entwickelt von [Prof. Thomas Smits](http://www.smits-net.de)
 
 ### Cloud-Dienste
 
-Diese Vorlage wurde bereits von Studierenden erfolgreich bei Cloud-Diensten eingesetzt, mit denen man LaTeX-Dokumente schreiben, kompilieren und verwalten kann. Positive Erfahrungsberichte liegen bisher mit [Overleaf](https://www.overleaf.com) vor. Eine Anleitung zu Overleaf finden Sie weiter unten.
+Diese Vorlage wurde bereits von Studierenden erfolgreich bei Cloud-Diensten eingesetzt, mit denen man LaTeX-Dokumente schreiben, kompilieren und verwalten kann. Positive Erfahrungsberichte liegen bisher mit [Overleaf](https://www.overleaf.com) vor. Eine Anleitung zu Overleaf finden Sie weiter unten, ohne diese werden Sie vermutlich einen Compile-Fehler bekommen.
 
 
 ## Werkzeuge, Dateiformat
