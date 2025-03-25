@@ -1,6 +1,6 @@
 # Vorlage für Seminararbeiten mit LaTeX
 
-Diese Vorlage ist für Seminararbeiten mit LaTeX an der Hochschule Mannheim gedacht. Sie erhebt keinen Anspruch darauf, den Wünschen aller Professoren zu entsprechen. Klären Sie daher immer im Voraus mit Ihrem Betreuer, ob die Vorlage seinen Vorstellungen entspricht.
+Diese Vorlage ist für Seminararbeiten mit LaTeX an der Technischen Hochschule Mannheim gedacht. Sie erhebt keinen Anspruch darauf, den Wünschen aller Professoren zu entsprechen. Klären Sie daher immer im Voraus mit Ihrem Betreuer, ob die Vorlage seinen Vorstellungen entspricht.
 
 Diese Vorlage wurde entwickelt von [Prof. Thomas Smits](http://www.smits-net.de).
 
