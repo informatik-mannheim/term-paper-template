@@ -1,5 +1,9 @@
 \documentclass[conference,compsoc,final,a4paper]{IEEEtran}
 \usepackage[utf8]{inputenx}
+\usepackage{placeins}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{todonotes}
 
 %% Bitte legen Sie hier den Titel und den Autor der Arbeit fest
 \newcommand{\autoren}[0]{NACHNAME, VORNAME}
@@ -84,7 +88,7 @@ Die Zitierweise muss im gesamten Text einheitlich sein.
 
 Wichtig ist, dass das Übernehmen von fremden Textstellen ohne entsprechende Kennzeichnung der Herkunft in einer wissenschaftlichen Arbeit nicht akzeptabel ist. Plagiate werden mit der Note 5.0 bewertet.
 
-\subsection{Zitate im Text}
+\subsection{Zitate im Text}\label{textquotes}
 Wichtig ist das korrekte Zitieren von Quellen, wie es auch von \cite{Kornmeier2011} dargelegt wird. Interessant ist in diesem Zusammenhang auch der Artikel von \cite{Kramer2009}. Häufig werden die Zitate auch in Klammern gesetzt, wie bei \parencite{Kornmeier2011} und mit Seitenzahlen versehen \parencite[S. 22--24]{Kornmeier2011}.
 Damit hier auch wissenschaftliche Arbeiten zitiert sind, sei hier auf eine Journal-Veröffentlichung \cite{Christidis2016} und einen Konferenzbeitrag \cite{Redmon2016} verwiesen.
 
@@ -302,5 +306,56 @@ Eine Formel gefällig? Mitten im Text $a_2 = \sqrt{x^3}$ oder als eigener Absatz
 % Literaturverzeichnis
 \addcontentsline{toc}{section}{Literatur}
 \printbibliography
+
+\section*{Dokumentation zu Nutzung generativer KI}
+\addcontentsline{toc}{section}{Dokumentation zu Nutzung generativer KI}
+
+\todo[inline]{Ein wichtiges Prinzip wissenschaftlicher Arbeit ist die  Transparenz über die verwendeten Methoden und Werkzeuge zur Gewinnung von Erkenntnissen und zur Erstellung von Texten. Das bedeutet, dass der Einsatz von Sprachmodellen wie Conversational AIs deutlich gemacht werden muss. Deswegen sollten Sie am Ende Ihrer Arbeit die verwendeten Tools und Prompts aufführen. Hier sehen Sie ein paar Bespiele.}
+
+\vspace{1em}
+\begin{footnotesize}
+  \raggedright
+  \textit{Zweck}: Stilkorrektur
+  \begin{itemize}
+    \item \textit{Tool}: ChatGPT
+    \item \textit{Prompt}: Bitte lasse den folgenden Text wissenschaftlicher klingen ...
+    \item \textit{Teil}: Gesamte Arbeit
+    \item \textit{Anmerkungen}: Es wurden nicht alle Vorschläge übernommen.
+  \end{itemize}
+
+  \textit{Zweck}: Erstellen einer Grafik
+  \begin{itemize}
+    \item \textit{Tool}: JumboDumboKI
+    \item \textit{Prompt}: Siehe Listing~\ref{ki_prompt_1}
+    \item \textit{Teil}: Abbildung~\ref{fig_sim}
+    \item \textit{Anmerkungen}: Grafik musste in Photoshop nachbearbeitet werden.
+  \end{itemize}
+
+  \textit{Zweck}: Erstellen einer Datenanalyse
+  \begin{itemize}
+    \item \textit{Tool}: Claude Code
+    \item \textit{Prompt}: Siehe Listing~\ref{ki_prompt_2}
+    \item \textit{Teil}: Kapitel~\ref{textquotes}
+  \end{itemize}
+
+  \end{footnotesize}
+
+  \FloatBarrier
+
+  \begin{lstlisting}[float,label={ki_prompt_1},caption={Prompt zur Grafikerstellung},breakindent=0pt]
+  Ich habe einen Datensatz mit den Spalten 'Datum' und 'Verkäufe' von 2024 bis 2026. Erstelle mir ein klares Liniendiagramm, um den zeitlichen Verlauf der Verkäufe zu visualisieren. Hebe dabei die Monate mit dem höchsten und dem niedrigsten Umsatz farblich hervor.
+  \end{lstlisting}
+
+  \begin{lstlisting}[float,label={ki_prompt_2},caption={Prompt zur Datenanalyse},breakindent=0pt]
+  You are a senior data analyst.
+
+  Task: Identify the top 3 trends, flag anomalies, suggest 2 follow-up analyses.
+
+  Format: Trend summary (2 sentences each), anomaly table (value | why unusual | what to investigate).
+
+  Context: This data is from my own research.
+
+  ...
+  \end{lstlisting}
 
 \end{document}

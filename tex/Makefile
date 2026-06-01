@@ -3,7 +3,7 @@ RESULT_DIR = ../result
 LATEX = pdflatex
 BIBTEX = biber
 MAKEINDEX = makeindex
-TEMP_FILES = *.aux *.bcf *.fdb_latexmk *.fls *.log *.out *.run.xml *.synctex.gz *.toc *.tmp
+TEMP_FILES = *.aux *.bcf *.fdb_latexmk *.fls *.log *.out *.run.xml *.synctex.gz *.toc *.tmp *.bbl
 
 define latex-it
 $(eval FILE = $(firstword $^))
@@ -13,9 +13,9 @@ cp literatur.bib $(TEMP_DIR)
 @$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE)
 @cd $(TEMP_DIR) ; $(BIBTEX) $(basename $(FILE))
 # @cd $(TEMP_DIR) ; $(MAKEINDEX) $(basename $(FILE)).idx
-@$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
-@$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
-@$(LATEX) -output-directory=$(TEMP_DIR) $(FILE)
+@$(LATEX) -draftmode -interaction batchmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
+@$(LATEX) -draftmode -interaction batchmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
+@$(LATEX) -interaction batchmode -output-directory=$(TEMP_DIR) $(FILE)
 endef
 
 .PHONY: all
