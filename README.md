@@ -85,9 +85,9 @@ Die Ergebnisse finden sich im Ordner `result`. Zum einfacheren Verständnis ist 
   * Öffnen Sie die Datei `seminararbeit.tex` mit Texmaker
   * Gehen Sie auf "Options" -> "Define current document as 'Master Document'"
   * Gehen Sie auf "Options" -> "Configure Texmaker"
-    * Tragen Sie unter "Commands" -> "Bib(la)tex" als Kommando `biber %` ein<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/biber.png" width="400">
-    * Wählen Sie unter "Quick Build" die Option "PdfLaTeX + Bib(la)tex + BdfLaTeX (x2) + View Pdf<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/quick_build.png" width="400">
-  * Wählen Sie in der Menuezeile "Quick Build" aus<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/master/latex/images/run.png" width="150">
+    * Tragen Sie unter "Commands" -> "Bib(la)tex" als Kommando `biber %` ein<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/main/latex/images/biber.png" width="400">
+    * Wählen Sie unter "Quick Build" die Option "PdfLaTeX + Bib(la)tex + BdfLaTeX (x2) + View Pdf<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/main/latex/images/quick_build.png" width="400">
+  * Wählen Sie in der Menuezeile "Quick Build" aus<br><img src="https://github.com/informatik-mannheim/thesis-template/raw/main/latex/images/run.png" width="150">
   * Klicken Sie auf den Pfeil links von "Quick Build"
   * Das Dokument sollte gebaut werden und rechts im Bildschirm erscheinen
 
